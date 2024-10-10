@@ -10,24 +10,26 @@ import { CiShare1 } from "react-icons/ci";
 import Footer from '../components/Footer';
 import ReviewBox from '../components/ReviewBox';
 import Contact from '../components/Contact';
+import { review } from '../components/review';
+import AutoSlider from '../components/AutoSlider'
+
 
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isLetterLoading, setLetterLoading] = useState(true)
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000); // Adjust duration as needed
-        return () => clearTimeout(timer);
-    }, []);
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLetterLoading(false)
-        }, 1500); // Adjust duration as needed
-        return () => clearTimeout(timer);
-    }, []);
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % review.length);
+        }, 3000); // Change slide every 3 seconds
+
+        return () => clearInterval(interval);
+    }, [review.length]);
+
+ 
     return (
         <section className='bg-black  text-white '>
             <div>
@@ -43,7 +45,7 @@ const Home = () => {
                         <p>
                             Experience the breadth and depth of the Zoho ecosystem, with the professional services, infrastructure, support, and security that a large business needs. Streamline complex business processes, build strong relationships with your customers, and drive growth at scale.
                         </p>
-                        <button className='border-[0.5px] border-white py-2 px-4  mt-5 after:z-[-1px] after:right-[-10%]'>See more</button>
+                        {/* <button className='border-[0.5px] border-white py-2 px-4  mt-5 after:z-[-1px] after:right-[-10%]'>See more</button> */}
                     </div>
                 </div>
             </div>
@@ -70,7 +72,7 @@ const Home = () => {
                                     <Laptop image={x.lap} link={x.link} />
                                 </div>
                             </div>
-                                {/* <div className='flex items-center justify-center text-2xl my-5 md:[word-spacing:10px]'><div className='mx-3'><a href={x.link} target="_blank" className=''>{x.topic}</a></div><div className='text-lg'><CiShare1 /></div></div> */}
+                            {/* <div className='flex items-center justify-center text-2xl my-5 md:[word-spacing:10px]'><div className='mx-3'><a href={x.link} target="_blank" className=''>{x.topic}</a></div><div className='text-lg'><CiShare1 /></div></div> */}
                         </div>
                     ))}
                 </div>
@@ -81,12 +83,14 @@ const Home = () => {
                     WHAT OUR CLIENTS SAY
                     <div className='border-2 border-white w-[50%] leading-tight'></div>
                 </div>
-                <div className='mt-10 mx-16'>
-                    <ReviewBox />
+                <div className='mt-10'>
+
+                    <AutoSlider reviews={review}/>
+                    
                 </div>
             </div>
             <div className='mt-16'>
-                <Contact/>
+                <Contact />
             </div>
             <div>
                 <Footer />
