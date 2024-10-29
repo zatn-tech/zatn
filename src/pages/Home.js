@@ -37,13 +37,15 @@ const Home = () => {
             </div>
             <div className='text-9xl flex flex-col md:flex-row justify-around mt-[10%]'>
                 <div className='flex w-[50%] justify-center items-center'>
-
+                <h1>Zatn thrives on your success</h1>
                 </div>
                 <div className={`md:w-[30%] text-lg `}>
+                
                     <div className='p-5 text-justify'>
+                        
                         <div className='border-t-8 border-white w-16 mb-10'></div>
                         <p>
-                            Experience the breadth and depth of the Zoho ecosystem, with the professional services, infrastructure, support, and security that a large business needs. Streamline complex business processes, build strong relationships with your customers, and drive growth at scale.
+                        If you’re looking to create an exceptional online presence, you’ve come to the right team. We are a passionate group of skilled professionals committed to transforming your vision into reality and elevating your business to new heights. 
                         </p>
                         {/* <button className='border-[0.5px] border-white py-2 px-4  mt-5 after:z-[-1px] after:right-[-10%]'>See more</button> */}
                     </div>
