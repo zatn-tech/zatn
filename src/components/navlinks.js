@@ -1,13 +1,13 @@
 export const navlinks = [
     {
-        name:"What We Do",
+        name:"Our Services",
         link:"whatwedo",
         pos:"top-[13%]",
         forMobile:true,
         forLap:true,
     },
     {
-        name:"Who We Are",
+        name:"Our Works",
         link:"whoweare",
         pos:"top-[20%]",
         forMobile:true,
