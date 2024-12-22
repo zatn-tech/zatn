@@ -40,13 +40,13 @@ const AutoSlider = ({ reviews }) => {
     ]
   };
   return (
- <div className='container w-96 md:w-[1000px] lg:w-full px-16'>
+ <div className='container w-[360px] sm:w-96 md:w-[1000px] lg:w-full px-16'>
   <Slider {...settings}>
     {reviews.map((review,index)=>(
 
       <div key={index} className='md:px-16'>
 
- <ReviewBox name={review.name} content={review.content} rating={review.rating}/>
+ <ReviewBox name={review.name} image={review.image} content={review.content} rating={review.rating}/>
 </div>
 
 ))}

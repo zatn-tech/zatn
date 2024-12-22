@@ -15,9 +15,9 @@ const SlidingButton = ({ link, name, pos }) => {
         onClick={toggleSlide}
         className={`fixed ${pos} right-0 transform -translate-y-1/2 transition-transform duration-300  ${
           isOpen ? 'translate-x-0' : 'translate-x-[90%]'
-        } bg-orange-900 text-white py-2 px-4 rounded-l-lg`}
+        } bg-orange-900 text-white py-2 px-4 rounded-l-lg w-52`}
       >
-        <Link onClick={toggleSlide} className='cursor-pointer ml-10 hover:text-gray-400'
+        <Link onClick={toggleSlide} className='cursor-pointer  ml-10 hover:text-gray-400'
                             activeClass="active"
                             to={link}
                             spy={true}

@@ -17,6 +17,7 @@ import { FiInstagram } from 'react-icons/fi';
 import { instaprofiles } from '../components/insta';
 import { whychooseus } from '../components/whychooseus';
 import bg from '../assets/images/home-bg.jpg';
+import logo from '../assets/images/logo.jpeg'
 
 
 
@@ -51,7 +52,7 @@ const Home = () => {
                 <div>
                     <Navbar />
                 </div>
-                <div className='text-9xl justify-around mt-[10%]'>
+                <div id='home' className='text-7xl md:text-9xl justify-around mt-[10%]'>
                     <div className='md:mx-10'>
                         <h1 className='drop-shadow-[5px_5px_black] '>Zatn thrives on your success</h1>
                     </div>
@@ -147,7 +148,7 @@ const Home = () => {
                 <Contact />
             </div>
             <div className=''>
-                <Services />
+                {/* <Services /> */}
             </div>
             <div>
                 <Footer />

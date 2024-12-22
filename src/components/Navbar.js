@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import SlidingButton from './SlidingButton'
 import { navlinks } from './navlinks'
+import logo from '../assets/images/logo.jpeg'
 
 const Navbar = () => {
     return (
         <div className='py-[2%] text-white text-xl'>
             <div className='flex justify-around'>
                 <div>
-                    Zatn.
+                    <img className='w-16' src={logo}/>
                 </div>
                 <div className='hidden md:flex justify-around '>
                     {navlinks.map(x=>(
