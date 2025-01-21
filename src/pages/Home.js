@@ -91,6 +91,16 @@ const Home = () => {
                                 <div className='md:mx-16 mx-auto mt-16 md:mt-0 '>
                                     <Laptop image={x.lap} link={x.link} />
                                 </div>
+                                {x.maintenance &&
+                                    <div className='text-center my-5'>
+                                        MAINTAINED BY ZATN.
+                                    </div>
+                                }
+                                {!x.maintenance &&
+                                    <div className='text-center my-5'>
+                                        DEVELOPED AND MAINTAINED BY ZATN.
+                                    </div>
+                                }
                             </div>
                             {/* <div className='flex items-center justify-center text-2xl my-5 md:[word-spacing:10px]'><div className='mx-3'><a href={x.link} target="_blank" className=''>{x.topic}</a></div><div className='text-lg'><CiShare1 /></div></div> */}
                         </div>
