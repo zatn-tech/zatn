@@ -17,8 +17,8 @@ const Footer = () => {
         <div className='md:w-[80%] grid md:grid-cols-4 text-center gap-10'>
           <div>
             <div className='text-3xl mb-3'>REACH US</div>
-            <div className='list-disc'>
-              <li>Zatn.</li>
+            <div className='list-none'>
+              <li>Zatn</li>
               <li>9597811944</li>
               <li>zatn.business@gmail.com</li>
             </div>
@@ -31,14 +31,14 @@ const Footer = () => {
           </div>
           <div>
             <div className='text-3xl '>WORKING HOURS</div>
-            <div>
+            <div className='list-none'>
               <li>9 AM - 9 PM</li>
               <li>Monday - Saturday</li>
             </div>
           </div>
           <div>
             <div className='text-3xl mb-3'>QUICK LINKS</div>
-            <div className='flex flex-col list-disc'>
+            <div className='flex flex-col list-none'>
               {navlinks.map(x=>(
                 x.quickLink &&
               
@@ -71,7 +71,7 @@ const Footer = () => {
                 <div className='mx-5 text-3xl'><a href='https://api.whatsapp.com/send?phone=9597811944'><RiWhatsappLine/></a></div>
             </div>
             <h1 className='py-5'>
-            ©2024, Zatn. Technologies. All Rights Reserved.
+            ©2025, Zatn. Technologies. All Rights Reserved.
             </h1>
         </div>
     </div>

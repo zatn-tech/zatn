@@ -5,16 +5,16 @@ export const whatwedo = [
         topic:"Website Development",
         content:"Our website design services focus on creating visually appealing, user-friendly, and highly functional websites tailored to meet your business goals. We combine creativity with technology to deliver an exceptional online presence.",
     },
-    {
-        image:i1,
-        topic:"Coding Academy",
-        content:"Our coding academy specializes in full-stack development with MERN and Java, offering robust placement preparation. We provide a user-friendly learning experience tailored to your career goals, empowering students to excel in problem-solving and thrive in the tech industry.",
-    },
-    {
-        image:i1,
-        topic:"Content Creation",
-        content:"Our content creation service delivers high-quality, tailored digital content. We empower creators with expert guidance, innovative strategies, and user-friendly tools, helping them craft impactful stories, enhance branding, and achieve success in digital marketing, connecting effectively with their target audience.",
-    },
+    // {
+    //     image:i1,
+    //     topic:"Coding Academy",
+    //     content:"Our coding academy specializes in full-stack development with MERN and Java, offering robust placement preparation. We provide a user-friendly learning experience tailored to your career goals, empowering students to excel in problem-solving and thrive in the tech industry.",
+    // },
+    // {
+    //     image:i1,
+    //     topic:"Content Creation",
+    //     content:"Our content creation service delivers high-quality, tailored digital content. We empower creators with expert guidance, innovative strategies, and user-friendly tools, helping them craft impactful stories, enhance branding, and achieve success in digital marketing, connecting effectively with their target audience.",
+    // },
     {
         image:i1,
         topic:"Video Editing",
