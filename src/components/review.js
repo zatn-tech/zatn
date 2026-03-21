@@ -1,7 +1,4 @@
-import bgs from '../assets/images/log.png'
 import sms from '../assets/images/download.jpg'
-import naveen from '../assets/images/naveen.jpg'
-import prakash from '../assets/images/prakash.png'
 export const review =[
     /*{
         

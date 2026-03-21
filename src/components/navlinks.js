@@ -1,3 +1,6 @@
+/** In-page nav scroll duration (ms). `react-scroll` default felt sluggish at 1000. */
+export const NAV_SCROLL_DURATION = 400;
+
 export const navlinks = [
     
     {

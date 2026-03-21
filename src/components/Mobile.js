@@ -1,43 +1,30 @@
-import React, { useState,useEffect,useRef } from 'react'
+import Image from "next/image";
 
-const Mobile = ({image,link}) => {
-
-    const [hover,setHover]=useState(false);
-    const divRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHover(true); // Set hover to true when the div appears on screen
-        } else {
-          setHover(false); // Optionally reset hover when the div leaves the screen
-        }
-      },
-      {
-        threshold: 0.1, // Trigger when 10% of the div is visible
-      }
-    );
-
-    if (divRef.current) {
-      observer.observe(divRef.current);
-    }
-
-    return () => {
-      if (divRef.current) {
-        observer.unobserve(divRef.current);
-      }
-    };
-  }, []);
+const Mobile = ({ image, link, title = "Project" }) => {
+  const src = typeof image === "string" ? image : image;
 
   return (
-    <a href={link} className='' target='_blank'>
-
-    <div ref={divRef} className={'border-[0.2px] shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] border-white h-[430px] rounded-3xl w-[200px] bg-contain bg-no-repeat'} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}  style={{backgroundImage: hover ? `url(${image})` : 'none'}} >
-        <div className='mt-2 h-4 border-[0.5px] border-white mx-[32%] rounded-full bg-black'></div>
-    </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group mx-auto block w-full max-w-[200px] sm:max-w-[220px]"
+    >
+      <div className="relative overflow-hidden rounded-[2rem] border border-mono-600/80 bg-mono-950 shadow-[8px_8px_0_rgba(255,255,255,0.04),16px_16px_48px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:shadow-[10px_10px_0_rgba(255,255,255,0.06),20px_20px_56px_rgba(0,0,0,0.65)]">
+        <div className="pointer-events-none relative z-10 mx-[32%] mt-2 h-3.5 rounded-full border border-mono-500 bg-mono-950 sm:h-4" />
+        <div className="relative aspect-[9/19] w-full">
+          <Image
+            src={src}
+            alt={`${title} — mobile preview`}
+            fill
+            className="object-contain object-center px-1.5 pb-2.5 pt-0.5 sm:px-2 sm:pb-3 sm:pt-1"
+            sizes="(max-width: 640px) 72vw, 220px"
+            priority={false}
+          />
+        </div>
+      </div>
     </a>
-  )
-}
+  );
+};
 
-export default Mobile
+export default Mobile;

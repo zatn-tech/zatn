@@ -1,14 +1,29 @@
-import React from 'react'
+import Image from "next/image";
 
-const Laptop = ({image,link}) => {
+const Laptop = ({ image, link, title = "Project" }) => {
+  const src = typeof image === "string" ? image : image;
+
   return (
-    <a href={link} target='_blank'>
-        
-    <div className={'border-[0.2px] shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] border-white w-[350px] h-[200px] md:w-[650px] sm:h-[250px] sm:w-[360px] md:h-[365px] rounded-xl bg-cover md:bg-contain'}   style={{backgroundImage: `url(${image})`}}>
-
-    </div>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block w-full min-w-0 max-w-[min(100%,720px)]"
+    >
+      <div className="overflow-hidden rounded-xl border border-mono-600/80 bg-mono-900 shadow-[8px_8px_0_rgba(255,255,255,0.04),20px_20px_50px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:-translate-y-0.5">
+        <div className="relative aspect-[16/10] w-full min-w-0">
+          <Image
+            src={src}
+            alt={`${title} — desktop preview`}
+            fill
+            className="object-contain object-center p-2 sm:p-3 md:p-5"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 720px"
+            priority={false}
+          />
+        </div>
+      </div>
     </a>
-  )
-}
+  );
+};
 
-export default Laptop
+export default Laptop;
